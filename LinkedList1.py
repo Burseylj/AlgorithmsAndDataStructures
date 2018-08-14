@@ -65,7 +65,7 @@ class LinkedList1(object):
             newPointer = pointer.getNext()
             lastPointer = pointer
             pointer= newPointer
-def main():
+if __name__ == "__main__":
 
     myList = LinkedList1()
     for i in map(lambda x:x**2, range(10)):
@@ -80,7 +80,6 @@ def main():
     myList.delete(81)
 
     print myList
-main()
 
     
 
