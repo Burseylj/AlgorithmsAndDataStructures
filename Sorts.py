@@ -1,3 +1,4 @@
+import random
 def mergeSort(array):
     size = len(array)
     if size < 2:
@@ -25,9 +26,21 @@ def merge(arr1,arr2):
         
     return newArr + arr1 + arr2
 
+def quickSort(array):
+    if len(array) < 2:
+        return array
+    pivot = array[0]
+    lessArr, moreArr = [],[]
+    for x in array[1:]:
+        if x <= pivot:
+            lessArr.append(x)
+        else:
+            moreArr.append(x)
 
+    return quickSort(lessArr) + [pivot] + quickSort(moreArr)
 
 
 def main():
-    print merge([1,3,5], [0,2,10])
-    print merge([1,3,5], [0,2,10,11])
+    for i in xrange(100):
+        print quickSort(random.sample(range(0,100),10))
+main()
