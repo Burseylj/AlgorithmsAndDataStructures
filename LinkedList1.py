@@ -80,6 +80,7 @@ if __name__ == "__main__":
     myList.delete(81)
 
     print myList
+    print myList.size()
 
     
 

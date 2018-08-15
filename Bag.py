@@ -22,3 +22,5 @@ if __name__ == "__main__":
     print myBag
     print myBag.isEmpty()
     print myBag.size()
+    newBag = Bag()
+    print newBag.isEmpty()
